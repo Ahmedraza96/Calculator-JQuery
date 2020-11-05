@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            width: 50px;
+            height: 35px;
+        }
+
+        input {
+            background-color: lightgray;
+            width: 150px;
+            height: 25px;
+        }
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<body>
+    <div id="Main">
+        <input type="number" id="val1">
+        <input type="number" id="val2">
+        =
+        <input type="number" id="result">
+        <p>
+            <button id="sum">+</button>
+            <button id="sub">-</button>
+            <button id="mul">*</button>
+            <button id="divi">/</button>
+        </p>
+        <script>
+            var value1 = 1;
+            var value2 = 1;
+            var result = 0;
+            
+            $(' #sum').click(() => {
+                value1 = $(' #val1 ').val()
+                value2 = $(' #val2 ').val()
+                var cal = Number(value1) + Number(value2)
+                $(' #result').val(cal)
+            })
+
+            $(' #sub').click(() => {
+                value1 = $(' #val1 ').val()
+                value2 = $(' #val2 ').val()
+                var cal = value1 - value2
+                $(' #result ').val(cal)
+            })
+
+            $(' #mul ').click(() => {
+                value1 = $(' #val1 ').val()
+                value2 = $(' #val2 ').val()
+                var cal = value1 * value2
+                $(' #result ').val(cal)
+            })
+
+            $(' #divi ').click(() => {
+                value1 = $(' #val1 ').val()
+                value2 = $(' #val2 ').val()
+                var cal = value1 / value2
+                $(' #result ').val(cal)
+            })
+
+
+
+
+            
+            
+            // console.log(value1 + value2);
+            // $(' #sum ').click(() => {
+            // })
+
+        </script>
+    </div>
+</body>
+
+</html>
